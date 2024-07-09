@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batistuta Portofolio</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- font Family Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- smooth scrool -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800 font-poppins overscroll-auto">
+    <!-- Alpine js -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
+
+    <div class="bg-gray-600" x-data="topBtn">
+      <button
+        @click="scrolltoTop"
+        id="topButton"
+        class="text-3xl text-green-700 fixed z-10 hidden opacity-80 bottom-5 right-5"
+      >
+        <i class="fas fa-arrow-circle-up"></i>
+      </button>
+    </div>
+
+    <!-- navbar start -->
+    <div class="container">
+      <div class="flex flex-col md:flex-row px-4">
+        <div
+          class="flex justify-between items-center px-4 py-4 md:py-0 border-b border-gray-700 md:border-b-0"
+        >
+          <div class="">
+            <a
+              href="#"
+              class="uppercase font-semibold text-gray-100 md:mr-4 tracking-widest"
+              >Welcome</a
+            >
+          </div>
+          <div class="nav-toggler">
+            <button class="items-center">
+              <svg
+                class="transition duration-500 ease-in-out w-6 h-6 outline-none text-gray-100 block md:hidden"
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="transition duration-500 ease-in-out nav md:flex hidden flex-col md:flex-row justify-between w-full py-4 md:py-0 md:bg-transparent bg-gray-700 rounded-xl"
+        >
+          <div
+            class="transition duration-500 ease-in-out flex flex-col md:flex-row md:gap-4"
+          ></div>
+
+          <!-- navs -->
+          <!-- <div
+            class="transition duration-500 ease-in-out flex flex-col md:flex-row md:gap-4 p-4"
+          >
+            <a
+              href="#portfolio"
+              class="block px-4 py-2 md:py-1 rounded-md md:my-2 text-gray-100 md:text-left text-center hover:bg-gray-800 transition duration-200 ease-in-out"
+              >Portfolio</a
+            >
+            <a
+              href="#aboutme"
+              class="block px-4 py-2 md:py-1 rounded-md my-2 text-gray-100 md:text-left text-center hover:bg-gray-800 transition duration-200 ease-in-out"
+              >About</a
+            >
+          </div> -->
+
+          <!-- social for desktop -->
+          <div class="flex flex-col md:flex-row md:gap-3 md:items-center">
+            <a
+              href="https://facebook.com/zhurche/"
+              class="hidden md:block px-4 py-2 md:py-1 rounded-md my-2 text-gray-100"
+              ><i class="fab fa-facebook-f text-xl"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/batis97_/"
+              class="hidden md:block px-4 py-2 md:py-1 rounded-md my-2 text-gray-100"
+              ><i class="fab fa-instagram text-xl"></i
+            ></a>
+
+            <!-- social for mobile -->
+            <div class="flex md:hidden align-center justify-around">
+              <a href="https://github.com/batis97"
+                ><i
+                  class="text-gray-50 hover:text-gray-300 transition duration-300 ease-in-out fab fa-github text-xl"
+                ></i
+              ></a>
+              <a href="https://www.linkedin.com/in/batis97/"
+                ><i
+                  class="text-gray-50 hover:text-gray-300 transition duration-300 ease-in-out fab fa-linkedin-in text-xl"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- navbar end -->
+
+      <!-- main page -->
+      <section class="mt-10">
+        <div class="mx-4 text-gray-50">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 h-62">
+            <div class="flex">
+              <img
+                src="assets/images/profile.jpg"
+                class="w-30 h-30 md:w-52 md:h-52 rounded-3xl md:rounded-full"
+                alt=""
+              />
+              <div class="block ml-3 md:ml-10 py-5">
+                <p class="block">Hello, I'm</p>
+                <h2 class="block text-xl lg:text-4xl">Batistuta</h2>
+                <p class="text-sm opacity-70 mt-2">Apps Developer</p>
+                <div class="mt-3 md:mt-5 space-x-6">
+                  <a href="https://github.com/batis97">
+                    <i
+                      class="fab fa-github md:text-2xl hover:text-gray-300 transition duration-300 ease-in-out"
+                    ></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/batis97/">
+                    <i
+                      class="fab fa-linkedin-in md:text-2xl hover:text-gray-300 transition duration-300 ease-in-out"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="lg:block">
+                <p class="block pt-5 text-center md:text-left">Job Position</p>
+                <ul class="mt-2">
+                  <li class="text-lg mt-2 text-center md:text-left">
+                    PT. Yapindo Jaya Abadi
+                  </li>
+                  <p class="text-sm opacity-70 text-center md:text-left">
+                    Desktop App Developer & Video Editor
+                  </p>
+                  <p class="text-sm opacity-70 text-center md:text-left">
+                    2016 - Saat ini
+                  </p>
+                </ul>
+              </div>
+              <div class="lg:block">
+                <p class="block pt-5 text-center md:text-left mt-5 md:mt-0">
+                  Award
+                </p>
+                <ul class="mt-2">
+                  <li class="text-lg text-center md:text-left">
+                    Juara 2 Nasional
+                  </li>
+                  <p class="text-sm opacity-70 text-center md:text-left">
+                    Lomba Film Pendek Jenjang SMA/SMK dengan tema “IT FOR ALL”
+                  </p>
+                </ul>
+              </div>
+              <div class="skills">
+                <h1 class="text-gray-50 mt-10 md:mt-5">Familiar with</h1>
+                <div class="imgae-logo justify-center flex gap-6">
+                  <img
+                    src="assets/images/electron.svg"
+                    class="w-full mt-3 shadow-xl rounded-xxl"
+                  />
+                  <img
+                    src="assets/images/html.png"
+                    class="w-full mt-3 shadow-xl rounded-xl"
+                  />
+                  <img
+                    src="assets/images/node.webp"
+                    class="w-full mt-3 shadow-xl rounded-xl"
+                  />
+                  <img
+                    src="assets/images/js.png"
+                    class="w-full mt-3 shadow-xl rounded-xxl"
+                  />
+                  <img
+                    src="assets/images/pr.png"
+                    class="w-full mt-3 shadow-xl rounded-xxl"
+                  />
+                  <img
+                    src="assets/images/ps.png"
+                    class="w-full mt-3 shadow-xl rounded-xxl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center pt-5 text-gray-100">
+            <div class="bg-gray-700 px-10 py-5 rounded-xl text-justify">
+              <h1 class="text-xl pb-2 font-bold">About Me</h1>
+              <h1>
+                Saya seorang alumni SMK Informatika Global Persada Jurusan
+                Multimedia. Berpengalaman sebagai video editor untuk konten
+                aplikasi pembelajaran selama 3 tahun. Selain itu, saya juga
+                memiliki kemampuan dan pengalaman dalam pengembangan dan
+                maintenance aplikasi berbasis desktop dan android selama 4
+                tahun. Senang bekerja dalam tim multi disiplin untuk
+                menghadirkan solusi kreatif dan inovatif. Keahlian teknis saya
+                didukung oleh kemampuan untuk berpikir kritis dan memecahkan
+                masalah, sehingga saya dapat menghadapi tantangan dan memenuhi
+                kebutuhan klien atau pengguna dengan cara yang efektif dan
+                efisien.
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-between items-center mx-4 py-6 border-b border-gray-700 md:border-b-0"
+        ></div>
+      </section>
+
+      <!-- To Top -->
+      <script>
+        document.addEventListener("alpine:init", () => {
+          Alpine.data("topBtn", () => ({
+            scrolltoTop() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            },
+          }));
+        });
+
+        var topBtn = document.getElementById("topButton");
+        window.onscroll = function () {
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+            ? topBtn.classList.remove("hidden")
+            : topBtn.classList.add("hidden");
+        };
+      </script>
+
+      <section class="portfolio">
+        <h1
+          class="text-center text-xl lg:text-4xl text-gray-50 text-lg mt-10 md:mt-0"
+          id="portfolio"
+        >
+          Portfolio
+        </h1>
+        <div
+          class="px-10 mt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5"
+        >
+          <!--Card 1-->
+          <div class="rounded-3xl overflow-hidden bg-gray-700">
+            <img
+              class="w-full rounded-t-3xl"
+              src="assets/images/ide.png"
+              alt="IDE"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-gray-50 text-xl">
+                IDE Yapindo Android Apps v.3.0
+              </div>
+              <div class="font-bold text-gray-50 text-l mb-4">
+                PT.Yapindo Jaya Abadi
+              </div>
+              <p class="text-gray-50 text-justify text-sm">
+                IDE Yapindo v.3.0 adalah Aplikasi yang digunakan untuk media
+                pembelajaran ilmu ekonomi untuk mahasiswa ekonomi dan bisnis di
+                Indonesia. Aplikasi IDE juga sudah terintegrasi dengan Midtrans
+                payment gateway. Pada Aplikasi mahasiswa dapat memempelajari 30
+                Modul belajar ilmu Ekonomi
+              </p>
+            </div>
+            <div class="px-6 pb-4">
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer hover:bg-gray-400 transition duration-300 ease-in-out"
+                >Android Studio</span
+              >
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer hover:bg-gray-400 transition duration-300 ease-in-out"
+                >Java</span
+              >
+            </div>
+          </div>
+          <!--Card 2-->
+          <div class="rounded-3xl overflow-hidden bg-gray-700">
+            <img
+              class="w-full rounded-t-3xl"
+              src="assets/images/m3.png"
+              alt="M3"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-gray-50 text-xl">
+                M3 Super Apps v.1.0
+              </div>
+              <div class="font-bold text-gray-50 text-l mb-4">
+                PT.Yapindo Jaya Abadi
+              </div>
+              <p class="text-gray-50 text-justify text-sm">
+                M3 Super Apps adalah Aplikasi yang digunakan untuk media
+                pembelajaran ilmu kesehatan untuk mahasiswa fakultas kesehatan
+                di Indonesia. Aplikasi ini memuat berbagai modul belajar
+                kesehatan, Live Teaching, Video Premim, dan Jurnal
+              </p>
+            </div>
+            <div class="px-6 pb-4">
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer hover:bg-gray-400 transition duration-300 ease-in-out"
+                >Electronjs</span
+              >
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer hover:bg-gray-400 transition duration-300 ease-in-out"
+                >Sveltekit</span
+              >
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer hover:bg-gray-400 transition duration-300 ease-in-out"
+                >Javascript</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================== TIDAK BOLEH DIHAPUS ========================== -->
+    <!-- Copyright Resa Endrawan https://www.facebook.com/resa.endrawan56/ -->
+    <div class="footer mt-16 bg-gray-700 py-4 text-gray-50">
+      <div class="text-center">
+        <span
+          >2024 &copy; Template by
+          <a href="https://rend.my.id" class="font-semibold hover:text-gray-800"
+            >res</a
+          ></span
+        >
+      </div>
+    </div>
+
+    <script src="js/hamburger.js"></script>
+  </body>
+</html>
